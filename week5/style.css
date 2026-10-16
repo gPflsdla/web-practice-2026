@@ -1,0 +1,127 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. 헤더: sticky와 z-index 적용 */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* 2. 메인 배너: background 단축형(그라데이션) 및 상하좌우 가운데 정렬 */
+.banner {
+    /* background 단축 속성으로 선형 그라데이션 지정 */
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    gap: 15px;
+}
+
+.banner h2 {
+    font-size: 28px;
+}
+
+.banner-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* 3. 상품 목록 영역 */
+.product-area {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.product-area h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* grid를 사용한 상품 목록 배치 */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* 4. 상품 아이템: relative를 주어 뱃지의 기준점으로 설정 */
+.item {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 5. 상품 뱃지: absolute를 이용해 아이템 왼쪽 상단에 띄우기 */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.badge.new {
+    background-color: #2ed573;
+}
+
+.badge.sale {
+    background-color: #ff4757;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #f1f2f6;
+    padding: 30px 40px;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 50px;
+}
