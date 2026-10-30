@@ -1,0 +1,5 @@
+p::first-letter { font-size: 2em; }   /* 첫 글자 "안"만 크게 */
+p::first-line   { color: gray; }      /* 첫 줄만 회색 */
+p::before { content: "★ "; }          /* 내용 앞에 ★ 추가 */
+p::after  { content: " ✓"; }          /* 내용 뒤에 ✓ 추가 */
+p::selection { background: yellow; }  /* 드래그한 부분만 노랑 */
